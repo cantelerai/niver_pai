@@ -65,3 +65,11 @@ main {
 .página, .texto, .Lima {
     margin-bottom:
 }
+
+Rodapé {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
