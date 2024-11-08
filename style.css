@@ -57,3 +57,13 @@ main {
 .página, .texto, .caldeirão {
     margin-bottom:
 }
+
+/* Rodapé */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.página, .texto, .Lima {
+    margin-bottom:
+}
