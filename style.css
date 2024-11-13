@@ -1,65 +1,82 @@
 CSS (style.css)
 
-/* Estilos para o Cabeçalho */
-header {
-    text-align: center;
-    background-color: #4CAF50;
-    padding: 20px;
-    color: white;
-}
-
-.Raiany {
-    text-align: center;
-    background-color: #bc6cf1;
-    padding: 20px;
-    color: white;
-    font-size: 2em;
-    font-weight: bold;
-}
-
-/* Estilos para o Menu de Navegação */
-.nave {
-    background-color: #b391f1;
-    overflow: hidden;
-}
-
-.nave ul {
-    list-style-type: none;
-    padding: 0;
+* {
     margin: 0;
-    display: flex;
-    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.nave li {
-    padding: 14px 20px;
+/* Definindo uma cor padrão do Color Hunt */
+:root {
+    --primary-color: #4A90E2; /* Escolha a cor desejada do Color Hunt */
+    --background-color: #F0F0F0;
+    --footer-color: #333;
 }
 
-.nave a {
-    text-decoration: none;
-    color: white;
-    padding: 14px 20px;
-    display: block;
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: #333;
 }
 
-.nave a:hover {
-    background-color: #b2dcff;
-}
-
-/* Estilos para o Conteúdo Principal */
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-.página, .texto, .caldeirão {
-    margin-bottom:
-}
-
-/* Rodapé*/
+/* Cabeçalho */
 header {
-    text-align: center;
-    background-color: #774c88;
-    padding: 20px;
+    background-color: var(--primary-color);
     color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+/* Logo */
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Conteúdo */
+.conteudo {
+    padding: 20px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.conteudo h2 {
+    color: var(--primary-color);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--footer-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
