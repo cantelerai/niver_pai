@@ -89,6 +89,10 @@ header h1 {
 
 .conteudo h2 {
     color: var(--primary-color);
+    .conteudo p {
+        text-align: center; /* Centraliza o texto horizontalmente */
+    }
+    
 }
 
 /* Rodapé */
