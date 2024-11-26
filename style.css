@@ -11,12 +11,11 @@ body {
 }
 
 /* Menu */
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
+h2 {
+    font-size: 3rem;
+    background: linear-gradient(45deg, #4e1ea7, #a486e9);
+    color: transparent;
+    background-clip: text;
 }
 
 .menu li {
