@@ -1,131 +1,106 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: url('familia.png].jpeg') no-repeat center center fixed;
-    background-size: cover;
-    overflow: hidden;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('foto-da-familia.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  margin: 100px auto;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #ff9900;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .container {
-    position: absolute;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
-    color: white;
-    max-width: 90%;
-    animation: fadeIn 2s ease-in-out;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+}
+
+/* Balões */
+.baloes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.balao {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 60px;
+  border-radius: 50% 50% 50% 50%;
+  opacity: 0.7;
+  animation: subir 10s linear infinite;
+}
+
+.balao::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: white;
+  transform: translateX(-50%);
+}
+
+@keyframes subir {
+  0% {
+    bottom: -100px;
+    opacity: 0;
+    transform: translateX(0);
   }
-  
-  p {
-    font-size: 1.5em;
+  50% {
+    opacity: 1;
   }
-  
-  button {
-    margin-top: 30px;
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #ffcc00;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s;
+  100% {
+    bottom: 120%;
+    transform: translateX(30px);
+    opacity: 0;
   }
-  
-  button:hover {
-    background-color: #ff9900;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  /* Balões animados */
-  .baloes {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    overflow: hidden;
-  }
-  
-  .balao {
-    position: absolute;
-    bottom: -150px;
-    width: 40px;
-    height: 60px;
-    background: red;
-    border-radius: 20px 20px 0 0;
-    animation: subir 10s linear infinite;
-    opacity: 0.8;
-  }
-  
-  .balao::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    width: 2px;
-    height: 20px;
-    background: white;
-    transform: translateX(-50%);
-  }
-  
-  .balao:nth-child(2) {
-    left: 20%;
-    background: blue;
-    animation-delay: 2s;
-  }
-  
-  .balao:nth-child(3) {
-    left: 40%;
-    background: green;
-    animation-delay: 4s;
-  }
-  
-  .balao:nth-child(4) {
-    left: 60%;
-    background: orange;
-    animation-delay: 1s;
-  }
-  
-  .balao:nth-child(5) {
-    left: 80%;
-    background: purple;
-    animation-delay: 3s;
-  }
-  
-  .balao:nth-child(6) {
-    left: 10%;
-    background: yellow;
-    animation-delay: 5s;
-  }
-  
-  @keyframes subir {
-    0% {
-      bottom: -100px;
-      opacity: 0;
-      transform: translateX(0);
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      bottom: 110%;
-      transform: translateX(30px);
-      opacity: 0;
-    }
-  }
-  
+}
