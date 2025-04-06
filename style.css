@@ -4,6 +4,8 @@ body {
   font-family: Arial, sans-serif;
   background: url('familia.png].jpeg') no-repeat center center fixed;
   background-size: cover;
+  background-position: center center;
+  object-fit: cover;
   overflow: hidden;
   height: 100vh;
 }
