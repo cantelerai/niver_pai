@@ -1,117 +1,131 @@
-CSS (style.css)
-/* Estilos gerais */
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-}
-/* Logo */
-.logo img {
-    height: 120px;
-}
-
-/* Menu */
-h2 {
-    font-size: 3rem;
-    background: linear-gradient(45deg, #4e1ea7, #a486e9);
-    color: transparent;
-    background-clip: text;
-}
-
-.menu li {
-    position: relative;
-}
-
-.menu a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Definindo uma cor padrão do Color Hunt */
-:root {
-    --primary-color: #9e52f5; /* Escolha a cor desejada do Color Hunt */
-    --background-color: #F0F0F0;
-    --footer-color: #333;
-}
-
-/* Corpo da página */
-body {
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: #333;
-}
-
-/* Cabeçalho */
-header {
-    background-color: var(--primary-color);
+    font-family: 'Arial', sans-serif;
+    background: url('foto-da-familia.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    position: absolute;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
     color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-header h1 {
-    font-size: 2em;
-    margin-top: 10px;
-}
-
-/* Logo */
-.logo img {
-    width: 100px;
-    height: auto;
-}
-
-/* Banner */
-.banner {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.banner img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Conteúdo */
-.conteudo {
-    padding: 20px;
-    text-align: left;
-    line-height: 1.6;
-}
-
-.conteudo h2 {
-    color: var(--primary-color);
-    .conteudo p {
-        text-align: center; /* Centraliza o texto horizontalmente */
-    }
-    
-}
-
-
-
-/* Rodapé */
-footer {
-    background-color: var(--footer-color);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
+    max-width: 90%;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.5em;
+  }
+  
+  button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ff9900;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Balões animados */
+  .baloes {
+    position: absolute;
     width: 100%;
-    bottom: 0;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .balao {
+    position: absolute;
+    bottom: -150px;
+    width: 40px;
+    height: 60px;
+    background: red;
+    border-radius: 20px 20px 0 0;
+    animation: subir 10s linear infinite;
+    opacity: 0.8;
+  }
+  
+  .balao::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: white;
+    transform: translateX(-50%);
+  }
+  
+  .balao:nth-child(2) {
+    left: 20%;
+    background: blue;
+    animation-delay: 2s;
+  }
+  
+  .balao:nth-child(3) {
+    left: 40%;
+    background: green;
+    animation-delay: 4s;
+  }
+  
+  .balao:nth-child(4) {
+    left: 60%;
+    background: orange;
+    animation-delay: 1s;
+  }
+  
+  .balao:nth-child(5) {
+    left: 80%;
+    background: purple;
+    animation-delay: 3s;
+  }
+  
+  .balao:nth-child(6) {
+    left: 10%;
+    background: yellow;
+    animation-delay: 5s;
+  }
+  
+  @keyframes subir {
+    0% {
+      bottom: -100px;
+      opacity: 0;
+      transform: translateX(0);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      bottom: 110%;
+      transform: translateX(30px);
+      opacity: 0;
+    }
+  }
+  
